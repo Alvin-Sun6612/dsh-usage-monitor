@@ -1,0 +1,5 @@
+# 本插件作为组合包被 DSH 加载时插入的层。
+# id 只在插件内部唯一即可；name 必须与 package.json 的 name 完全一致。
+- insert:
+    - id: usage-monitor
+      name: dsh-usage-monitor
