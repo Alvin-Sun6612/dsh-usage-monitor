@@ -1,0 +1,7 @@
+url: https://github.com/Alvin-Sun6612/dsh-usage-monitor
+name: Alvin-Sun6612/dsh-usage-monitor
+category: usage
+description:
+  en: 'Token usage monitor: shows token usage and the DeepSeek account balance in a panel.'
+  zh: '用量监视器：在面板中显示 token 用量与 DeepSeek 账号余额。'
+icon: https://raw.githubusercontent.com/Alvin-Sun6612/dsh-usage-monitor/main/icon.png
