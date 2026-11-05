@@ -3,6 +3,19 @@
 > **一句话**：把你这个插件推到**自己的 GitHub 仓库**，再去 <https://github.com/awesome-dsh-plugin/awesome-dsh-plugin> 提一个 PR，新增**一个文件** `data/plugins/<owner>__dsh-usage-monitor.yml`。
 > 市场（dshmarket）和官网都由这个仓库的 CI 自动生成 —— 不要改 README、不要改 plugins.json / index.json，也不要给 dsh-market 仓库提 PR。
 
+## 已完成（2026-11-05，用 Alvin-Sun6612 账号自动完成）
+
+| 步骤 | 状态 |
+| --- | --- |
+| 建公开仓库 <https://github.com/Alvin-Sun6612/dsh-usage-monitor> | ✅ 15 个文件已推送，默认分支 `main` |
+| 加 `dsh-plugin` topic（另有 deepseek-harness / token-usage / usage-monitor） | ✅ |
+| 发 Release `v0.1.0`，附件 `dsh-usage-monitor-0.1.0.tgz`（23864 B） | ✅ 免 git 安装用的就是它 |
+| fork <https://github.com/Alvin-Sun6612/awesome-dsh-plugin> | ✅ |
+| 分支 `add-dsh-usage-monitor` 上提交 `data/plugins/Alvin-Sun6612__dsh-usage-monitor.yml` | ✅ 已含 `icon` 与 `tarball` |
+| **提 PR** | ⏸ 待办：上游 CI 要求**仓库创建满 1 天**（`scripts/check-submission.mjs` 的 `MIN_AGE_DAYS = 1`），仓库建于 2026-11-05 13:38（CST），所以 **2026-11-06 13:38 之后**点下面这个链接提交即可（标题正文都已在下面模板里）：<br><https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/compare/main...Alvin-Sun6612:add-dsh-usage-monitor?expand=1> |
+
+> 注：本机到 `github.com` 的直连会超时（`api.github.com` 与 `raw.githubusercontent.com` 可用），所以在**这台机器**上 `github:` 直装、以及从 Release URL 装都会卡在下载；换个网络或让用户自己机器装不受影响（tgz 直装的流程已用本地 tgz 在临时 profile 验证通过）。
+
 本机目前**没有 git / gh / npm**，所以要么装工具，要么全在 GitHub 网页上操作，要么把 GitHub Token 交给我用 API 完成（见最后一节）。
 
 ---
