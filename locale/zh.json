@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "用量与余额",
+    "description": "按天统计 token 用量（输入 / 缓存命中 / 输出）并查看 DeepSeek 账号余额。"
+  }
+}
