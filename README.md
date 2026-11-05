@@ -20,13 +20,20 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 
 装完**重启 DSH**，侧边栏出现「用量与余额」。
 
-### 方式二：从 npm / tarball（发布给别人后）
+### 方式二：发给别人（推荐用 Release 里的 tgz，不需要 git、不需要 npm）
 
 ```powershell
-dsh plugin --profile desktop add dsh-usage-monitor          # npm 包
-dsh plugin --profile desktop add ./dsh-usage-monitor-0.1.0.tgz   # 本地 tgz
-dsh plugin --profile desktop add github:Alvin-Sun6612/dsh-usage-monitor # GitHub 仓库
+# 直接装 Release 附件（推荐）
+dsh plugin --profile desktop add "https://github.com/Alvin-Sun6612/dsh-usage-monitor/releases/download/v0.1.0/dsh-usage-monitor-0.1.0.tgz"
+
+# 手上有 tgz 文件时
+dsh plugin --profile desktop add .\dsh-usage-monitor-0.1.0.tgz
+
+# 仓库装了 git 时也可以用 GitHub 直装（pnpm 会走 git，需 allowBuilds 授权）
+dsh plugin --profile desktop add github:Alvin-Sun6612/dsh-usage-monitor
 ```
+
+市场（dshmarket）条目已准备好：`data/plugins/Alvin-Sun6612__dsh-usage-monitor.yml`，收录后可直接在市场里搜「用量与余额 / usage monitor」。
 
 卸载：`dsh plugin --profile desktop remove dsh-usage-monitor`
 
