@@ -1,0 +1,61 @@
+{
+  "name": "dsh-usage-monitor",
+  "version": "0.1.0",
+  "description": "DSH token 用量与余额面板：按天统计各会话的输入 / 缓存命中 / 输出 token，并展示 DeepSeek 账号余额。",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alvin-Sun6612/dsh-usage-monitor.git"
+  },
+  "homepage": "https://github.com/Alvin-Sun6612/dsh-usage-monitor#readme",
+  "bugs": {
+    "url": "https://github.com/Alvin-Sun6612/dsh-usage-monitor/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "tokens",
+    "usage",
+    "balance"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "icon.png",
+    "icon-180.png",
+    "LICENSE",
+    "install.ps1",
+    "market/*.md",
+    "market/*.yml",
+    "test/*.mjs",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.0 <0.3.0"
+  }
+}
